@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatabaseActivity">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Database Interaction"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/selectOneValue"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/selectOneValueBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/selectOneValue"
+        android:layout_toEndOf="@+id/selectOneValue"
+        android:layout_toRightOf="@+id/selectOneValue"
+        android:onClick="selectOneValue"
+        android:text="Select One" />
+
+    <EditText
+        android:id="@+id/updateNumberField"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/selectOneValueBtn"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/updateTextField"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectOneValueBtn"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/selectOneValue"
+        android:layout_toRightOf="@+id/selectOneValue"
+        android:ems="10"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectOneValue"
+        android:layout_toEndOf="@+id/selectOneValueBtn"
+        android:layout_toRightOf="@+id/selectOneValueBtn"
+        android:onClick="updatePersonTable"
+        android:text="Update Person Table" />
+
+    <EditText
+        android:id="@+id/insertNumberField"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/updateNumberField"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/Insert"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/updateNumberField"
+        android:onClick="insertPersonTable"
+        android:text="Insert Person Table" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/insertNumberField"
+        android:onClick="deleteFromTables"
+        android:text="Delete From Both Tables" />
+
+    <Button
+        android:id="@+id/selectJoin"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/delete"
+        android:onClick="selectFromBoth"
+        android:text="Select From Both Tables" />
+
+    <Button
+        android:id="@+id/selectOneTable"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/selectJoin"
+        android:onClick="selectFromOneTable"
+        android:text="Select All From Person Table" />
+
+
+</RelativeLayout>

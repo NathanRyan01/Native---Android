@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HardwareActivity">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Hardware"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="72dp"
+        android:onClick="getLocation"
+        android:text="Get Location" />
+
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="selectImage"
+        android:text="Select Image" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="216dp"
+        android:onClick="startRecording"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_alignBottom="@+id/videoView"
+        android:onClick="stopRecording"
+        android:text="Stop" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="189dp"
+        android:layout_height="199dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="143dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="189dp"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/locationtext"
+        android:layout_width="194dp"
+        android:layout_height="69dp"
+        android:layout_alignStart="@+id/videoView"
+        android:layout_alignTop="@+id/location"
+        android:text="Location Information" />
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="159dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/videoView"
+        android:onClick="recordingVideo"
+        android:text="Record" />
+
+</RelativeLayout>
